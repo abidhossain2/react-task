@@ -1,0 +1,74 @@
+/* .name_list{
+    background: #282d28;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 88px;
+    color: white;
+    height: 70px;
+}
+
+.attendance_list{
+    background: #e5dcdc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.attendance_status_container{
+    background: white;
+    width: 200px;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.attendance_status{
+    display: flex;
+    justify-content: space-between;
+} */
+
+.heading{
+    text-align: center;
+    background: #261c1c;
+    width: 300px;
+    margin: 50px auto 31px;
+    padding: 22px;
+    border-radius: 18px;
+    color: white;
+}
+
+.user_list{
+    background: #2d1e1e;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    justify-items: center;
+    color: white;
+}
+
+.name_list{
+    width: 200px;
+    text-align: center;
+    padding: 11px;
+}
+
+.attendance_list{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    justify-items: center;
+    background: #adf3f3;
+}
+
+.attendance_status_container{
+   width:200px;
+}
+
+.attendance_status{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 3px 1px #c7c6c4;
+    margin: 21px 0px;
+}
