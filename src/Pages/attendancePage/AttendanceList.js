@@ -5,6 +5,7 @@ import logo from '../../images/logo.png'
 
 const AttendanceList = () => {
     const [users, setUsers] = useState({});
+    const [loading, setLoading] = useState(false);
     useEffect(() => {
         const token = JSON.parse(localStorage.getItem('access_token'));
         fetch('https://test.nexisltd.com/test', {
@@ -15,7 +16,7 @@ const AttendanceList = () => {
         })
             .then(res => res.json())
             .then(data => setUsers(data))
-
+        setLoading(true);
     }, [])
 
 
@@ -27,40 +28,46 @@ const AttendanceList = () => {
             <div className='heading'>
                 <h2>Attendace List</h2>
             </div>
-            <div className='user_item'>
-                <div className='user_list'>
-                    {
-                        Object.entries(users).map(([key, value], i) => {
-                            return (
-                                <div className='name_list'>
-                                    <p>{value.name}</p>
-                                </div>
-                            )
-                        })
-                    }
-                </div>
 
-                <div className='attendance_list'>
-                    {
-                        Object.entries(users).map(([key, value], i) => {
-                            return (
-                                <div className='attendance_status_container'>{
-                                    Object.entries(value.attendance).map(([key, value], i) => {
-                                        return (
-                                            <div key={key} className='attendance_status'>
-                                                <p>{key}</p>
-                                                <p>{value.status}</p>
-                                            </div>
-                                        )
-                                    })
-                                }
-                                </div>
+            {
+                loading ? <div className='user_item'>
+                    <div className='user_list'>
+                        {
+                            Object.entries(users).map(([key, value], i) => {
+                                return (
+                                    <div className='name_list'>
+                                        <p>{value.name}</p>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
 
-                            )
-                        })
-                    }
+                    <div className='attendance_list'>
+                        {
+                            Object.entries(users).map(([key, value], i) => {
+                                return (
+                                    <div className='attendance_status_container'>{
+                                        Object.entries(value.attendance).map(([key, value], i) => {
+                                            return (
+                                                <div key={key} className='attendance_status'>
+                                                    <p>{key}</p>
+                                                    <p>{value.status}</p>
+                                                </div>
+                                            )
+                                        })
+                                    }
+                                    </div>
+
+                                )
+                            })
+                        }
+                    </div>
+                </div> : <div>
+                    <div className='spinner'></div>
                 </div>
-            </div>
+            }
+            
         </div>
 
     );
