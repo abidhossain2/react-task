@@ -7,7 +7,6 @@ const useToken = () => {
     const navigate = useNavigate();
     const handleSubmit = async (e) => {
         e.preventDefault();
-        navigate('/attendance')
         try {
             const config = {
                 method: 'POST',
@@ -22,11 +21,12 @@ const useToken = () => {
             const response = await fetch('https://test.nexisltd.com/login', config);
             const json = await response.json();
             if (response) {
-                window.localStorage.setItem('access_token',JSON.stringify(json.access_token));
+                window.localStorage.setItem('access_token', JSON.stringify(json.access_token));
+                navigate('/attendance')
             }
-            
+
         } catch (error) {
-            
+
         }
     }
 
