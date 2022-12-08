@@ -14,7 +14,7 @@ const LoginPage = () => {
                 <Link to='/' className='logo'>
                     <img src={logo} alt="" />
                 </Link>
-                <img src={bg} alt="" />
+                <img className="bg" src={bg} alt="" />
             </div>
             <div className='signup_form'>
                 <div className='label'>

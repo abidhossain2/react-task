@@ -27,37 +27,39 @@ const AttendanceList = () => {
             <div className='heading'>
                 <h2>Attendace List</h2>
             </div>
-            <div className='user_list'>
-                {
-                    Object.entries(users).map(([key, value], i) => {
-                        return (
-                            <div className='name_list'>
-                                <p>{value.name}</p>
-                            </div>
-                        )
-                    })
-                }
-            </div>
+            <div className='user_item'>
+                <div className='user_list'>
+                    {
+                        Object.entries(users).map(([key, value], i) => {
+                            return (
+                                <div className='name_list'>
+                                    <p>{value.name}</p>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
 
-            <div className='attendance_list'>
-                {
-                    Object.entries(users).map(([key, value], i) => {
-                        return (
-                            <div className='attendance_status_container'>{
-                                Object.entries(value.attendance).map(([key, value], i) => {
-                                    return (
-                                        <div key={key} className='attendance_status'>
-                                            <p>{key}</p>
-                                            <p>{value.status}</p>
-                                        </div>
-                                    )
-                                })
-                            }
-                            </div>
+                <div className='attendance_list'>
+                    {
+                        Object.entries(users).map(([key, value], i) => {
+                            return (
+                                <div className='attendance_status_container'>{
+                                    Object.entries(value.attendance).map(([key, value], i) => {
+                                        return (
+                                            <div key={key} className='attendance_status'>
+                                                <p>{key}</p>
+                                                <p>{value.status}</p>
+                                            </div>
+                                        )
+                                    })
+                                }
+                                </div>
 
-                        )
-                    })
-                }
+                            )
+                        })
+                    }
+                </div>
             </div>
         </div>
 

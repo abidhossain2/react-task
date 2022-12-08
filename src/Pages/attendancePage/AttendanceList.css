@@ -27,7 +27,7 @@
     justify-content: space-between;
 } */
 
-.heading{
+.heading {
     text-align: center;
     background: #261c1c;
     width: 300px;
@@ -37,7 +37,7 @@
     color: white;
 }
 
-.user_list{
+.user_list {
     background: #2d1e1e;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -46,13 +46,13 @@
     color: white;
 }
 
-.name_list{
+.name_list {
     width: 200px;
     text-align: center;
     padding: 11px;
 }
 
-.attendance_list{
+.attendance_list {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     align-items: center;
@@ -60,15 +60,167 @@
     background: #adf3f3;
 }
 
-.attendance_status_container{
-   width:200px;
+.attendance_status_container {
+    width: 200px;
 }
 
-.attendance_status{
+.attendance_status {
     display: flex;
     justify-content: space-between;
     padding: 5px;
     border-radius: 7px;
     box-shadow: 0px 0px 3px 1px #c7c6c4;
     margin: 21px 0px;
+}
+
+@media (max-width:1200px) {
+    .user_container {
+        width: 100%;
+    }
+}
+
+@media (width:1024px) {
+    .attendance_status_container {
+        width: 163px;
+    }
+
+    .attendance_status {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+        border-radius: 7px;
+        box-shadow: 0px 0px 3px 1px #c7c6c4;
+        margin: 21px 0px;
+        font-size: 14px;
+    }
+
+    .user_list {
+        background: #2d1e1e;
+        display: grid;
+        grid-template-columns: repeat(6, 169px);
+        align-items: center;
+        justify-items: center;
+        color: white;
+    }
+    .name_list {
+        width: 200px;
+        text-align: center;
+        padding: 11px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width:992px) {
+    .user_container {
+        width: 100%;
+    }
+
+    .user_item {
+        display: flex;
+        justify-content: center;
+    }
+
+    .user_list {
+        background: #2d1e1e;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: baseline;
+        justify-items: center;
+        color: white;
+    }
+
+    .name_list {
+        width: 200px;
+        text-align: center;
+        padding: 21px;
+    }
+
+    .attendance_list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        justify-items: center;
+        background: #adf3f3;
+        width: 300px;
+    }
+}
+
+@media (max-width:776px) {
+    .user_container {
+        width: 100%;
+    }
+
+    .user_item {
+        display: flex;
+        justify-content: center;
+    }
+
+    .user_list {
+        background: #2d1e1e;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: baseline;
+        justify-items: center;
+        color: white;
+    }
+
+    .name_list {
+        width: 200px;
+        text-align: center;
+        padding: 21px;
+    }
+
+    .attendance_list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        justify-items: center;
+        background: #adf3f3;
+        width: 300px;
+    }
+}
+
+@media (max-width:576px) {
+    .user_container {
+        width: 100%;
+    }
+
+    .user_item {
+        display: flex;
+        justify-content: center;
+    }
+
+    .user_list {
+        background: #2d1e1e;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: baseline;
+        justify-items: center;
+        color: white;
+    }
+
+    .name_list {
+        width: 143px;
+        text-align: center;
+        padding: 21px;
+        font-size: 12px;
+    }
+
+    .attendance_list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        justify-items: center;
+        background: #adf3f3;
+    }
+
+    .attendance_status {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+        border-radius: 7px;
+        box-shadow: 0px 0px 2px 0px #c7c6c4;
+        margin: 21px 0px;
+        font-size: 12px;
+    }
 }
